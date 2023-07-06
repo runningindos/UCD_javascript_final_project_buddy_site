@@ -1,10 +1,273 @@
-* {
+body {
+  background-color: #f4f4f8;
   margin: 0 5% 0 5%;
-  padding: 0;
-  background: #ffffff;
 }
-
+/*
 div {
-  border: 1px solid black;
+  border: 2px solid black;
+}
+*/
+h3 {
+  text-align: center;
 }
 
+/*header*/
+.headerContainer {
+  display: flex;
+  background-color: #fed766;
+}
+
+.headerText {
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*navigation*/
+.navigationContainer {
+  border-bottom: 1.5px solid #000000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #2ab7ca;
+}
+
+.fixedNav {
+  display: flex;
+  justify-content: center;
+}
+
+.unorderedList1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  transition: 1500ms;
+}
+
+li a:hover {
+  font-size: 1.5em;
+  transition: 1500ms;
+  color: #000;
+  letter-spacing: 5px;
+  font-weight: 900;
+}
+/*Buddy's image and container*/
+/*.divLine {
+  display: flexbox;
+  margin-top: 50%;
+}*/
+.buddyImage {
+  margin: 0;
+  padding: 0;
+}
+
+.buddyHero {
+  padding: 0;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+  width: 100%;
+  height: auto;
+}
+
+/*About Buddy banner*/
+.aboutBuddyBanner {
+  background-color: #e6e6ea;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 5px;
+}
+
+.buddyArrow {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 0px solid;
+  background-color: #e6e6ea;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+
+.downTab {
+  display: block;
+  width: 40px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e6e6ea;
+}
+/*Buddy's faves*/
+.favesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.favesBanner {
+  border-top: 1px solid #e6e6ea;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.places {
+  height: 200px;
+  width: 200px;
+  background-color: #fe4a49;
+  border-radius: 50%;
+}
+
+.placesText {
+  color: white;
+}
+
+.snacks {
+  height: 200px;
+  width: 200px;
+  background-color: #2ab7ca;
+  border-radius: 50%;
+}
+
+.snacksText {
+  color: white;
+}
+
+.toys {
+  height: 200px;
+  width: 200px;
+  background-color: #fed766;
+  border-radius: 50%;
+}
+
+.toysText {
+  color: white;
+}
+
+/*Gallery*/
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.galleryBanner {
+  border-top: 1px solid #e6e6ea;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.gallery1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.gallery2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.gallery3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.gallery4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+/*sign up*/
+.signUpContainer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 5px;
+}
+
+.signUpHeader {
+  border-top: 1px solid #e6e6ea;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  width: 250px;
+  height: 35px;
+  border-bottom: 1px solid #2ab7ca;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  text-align: center;
+  background-color: #f4f4f8;
+}
+
+input::placeholder {
+  color: #fe4a49;
+  letter-spacing: 5px;
+}
+
+.formButton {
+  border: 1px solid #2ab7ca;
+  border-radius: 20px;
+  width: 100px;
+  height: 35px;
+  background-color: #2ab7ca;
+  color: #e6e6ea;
+  letter-spacing: 5px;
+}
+/*footer*/
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 30px;
+}
+
+.copyright {
+  color: #fe4a49;
+
+}
+
+.contactLink {
+  color: #fe4a49;
+  text-decoration: none;
+}
