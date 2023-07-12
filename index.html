@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buddy</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="javascript/script.js">
+
+  </script>
 </head>
 <body>
   <!--header-->
@@ -16,13 +19,13 @@
     <nav class="fixedNav">
       <ul class="unorderedList1">
         <li class="navLinks">
-          <a href="" id="intro">Intro</a>
+          <a href="#introSection" id="intro">Intro</a>
         </li>
         <li class="navLinks">
-          <a href="" id="faves">Faves</a>
+          <a href="#favesSection" id="faves">Faves</a>
         </li>
         <li class="navLinks">
-          <a href="" id="faves">Gallery</a>
+          <a href="#gallerySection" id="faves">Gallery</a>
         </li>
       </ul>
     </nav>
@@ -33,13 +36,55 @@
     <img class="buddyHero" src="images/Buddy.jpg" alt="buddy">
   </div>
   <!--About Buddy banner-->
-    <h3 class="aboutBuddyBanner">Read Buddy's Intro</h3>
+  <div class="introBanner">
+    <h3 id="introSection" class="aboutBuddyBanner">Read Buddy's Intro</h3>
+  </div>
   <!--About Buddy down "arrow"-->
   <div class="buddyArrow">
-    <a class="downTab" href=""><img class="downTab" id="downTab" src="images/down-arrow.png" alt="Reveal Buddy's Bio"></a>
+    <a class="downTab" href=""><img class="downTab" id="downTab" onclick="aboutBuddyDropdownElement()" src="images/down-arrow.png" alt="Reveal Buddy's Bio"></a>
   </div>
+  <!--Div created from clicking downTab
+  <div class="buddyIntroDiv">
+    <div class="buddysStats">
+      <div class="buddysName">
+        <h4 class="statsHeader">Name</h4>
+        <p>Buddy Harrison-Ghiselli</p>
+      </div>
+      <div class="buddysBday">
+        <h4 class="statsHeader">Date of Birth</h4>
+        <p>05 Dec. 2020</p>
+      </div>
+      <div>
+        <h4 class="statsHeader">Gender</h4>
+        <p>Male</p>
+      </div>
+      <div class="buddysWeight">
+        <h4 class="statsHeader">Weight</h4>
+        <p>5.1kg</p>
+      </div>
+      <div class="buddysBreed">
+        <h4 class="statsHeader">Breed</h4>
+        <p>Havanese</p>
+      </div>
+    </div>
+    <div class="buddysBio">
+      <h4 class="bioHeader">About Buddy</h4>
+      <p class="description">
+        Buddy is a fun-loving little dog who is both chilled and hyper. He likes to walk in all of his favourite parks, and his favourite mode of transportation is on his daddy's motorbike.
+      </p>
+      <p>
+        Buddy has lots of doggy friends and     human friends, but his best friend is a bird named Yoshi who is also his big brother. Buddy and Yoshi play together and have lots of fun. They are very close, and are always excited to see one another. 
+      </p>
+      <p>
+        Buddy goes to work with his daddy sometimes, and is the most popular little guy in the entire building. He loves to receive cuddles, and play with his favourite toy with anyone who he can convince to play.</p>
+      <p>
+        To know Buddy is to love him, so get to know him.
+      </p>
+    </div>
+  </div>-->
+
   <!--Buddy's Faves-->
-  <h3 class="favesBanner">Buddy's faves!</h3>
+  <h3 id="favesSection" class="favesBanner">Buddy's Faves!</h3>
   <div class="favesContainer">
     <div class="places">
       <a class="placesText" id="placesLink" href=""><img src="#" alt="places"></a>
@@ -53,7 +98,7 @@
   </div>
   <!--Gallery-->
   <div class="galleryheaderContainer">
-    <h3 class="galleryBanner">Gallery</h3>
+    <h3 id="gallerySection" class="galleryBanner">Gallery</h3>
   </div>  
   <div class="galleryContainer">
     <div class="gallery1">
