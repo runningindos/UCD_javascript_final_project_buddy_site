@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buddy</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="javascript/script.js">
-
-  </script>
 </head>
 <body>
   <!--header-->
@@ -25,7 +22,7 @@
           <a href="#favesSection" id="faves">Faves</a>
         </li>
         <li class="navLinks">
-          <a href="#gallerySection" id="faves">Gallery</a>
+          <a href="#gallerySection" id="gallery">Gallery</a>
         </li>
       </ul>
     </nav>
@@ -39,12 +36,8 @@
   <div class="introBanner">
     <h3 id="introSection" class="aboutBuddyBanner">Read Buddy's Intro</h3>
   </div>
-  <!--About Buddy down "arrow"-->
-  <div class="buddyArrow">
-    <a class="downTab" href=""><img class="downTab" id="downTab" onclick="aboutBuddyDropdownElement()" src="images/down-arrow.png" alt="Reveal Buddy's Bio"></a>
-  </div>
-  <!--Div created from clicking downTab
-  <div class="buddyIntroDiv">
+  <!--Div created from clicking downTab-->
+  <div id="buddyIntroDiv">
     <div class="buddysStats">
       <div class="buddysName">
         <h4 class="statsHeader">Name</h4>
@@ -81,8 +74,11 @@
         To know Buddy is to love him, so get to know him.
       </p>
     </div>
-  </div>-->
-
+  </div>
+  <!--About Buddy down "arrow"-->
+  <div class="buddyArrow">
+    <a type="button" class="downTab"><img class="downTab" id="downTab" onclick="aboutBuddyDropdownElement2()"  src="images/down-arrow.png" alt="Reveal Buddy's Bio"></a>
+  </div>
   <!--Buddy's Faves-->
   <h3 id="favesSection" class="favesBanner">Buddy's Faves!</h3>
   <div class="favesContainer">
@@ -152,7 +148,6 @@
     </div>
   </div>
 </footer>  
-
-  
+<script src="javascript/script.js"></script>
 </body>
 </html>
