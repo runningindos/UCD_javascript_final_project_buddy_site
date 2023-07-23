@@ -33,6 +33,7 @@ function aboutBuddyDropdownElement2() {
     display = 1;
   }
 } 
+
 //Change down arrow to up arrow when Buddy's bio is revealed
 function changeToUpArrow(){
   let changeArrow = document.getElementById('downTab')
@@ -42,4 +43,17 @@ function changeToUpArrow(){
     changeArrow.src = 'images/down-arrow.png'
   } 
 }
+
 //add divs to display faves
+const showPlaces = document.getElementById('showPlaces');
+const placesContent = document.getElementById('placesContent');
+
+//add event listener for places button click
+showPlaces.addEventListener('click', displayFaves());
+
+function displayFaves(){
+  if(showPlaces.style.display === 'none'){
+    showPlaces.style.display = 'flex';
+  } else {showPlaces.style.display = 'none';
+  }
+}  
