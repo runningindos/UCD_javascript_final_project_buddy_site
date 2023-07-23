@@ -58,15 +58,6 @@ li a{
 }
 
 li a:hover{
-  font-size: 1.5em;
-  transition: 1500ms;
-  color: #000;
-  letter-spacing: 5px;
-  font-weight: 900;
-}
-
-.active {
-  font-size: 1.5em;
   transition: 1500ms;
   color: #000;
   letter-spacing: 5px;
@@ -78,6 +69,7 @@ li a:hover{
   display: flexbox;
   margin-top: 50%;
 }*/
+
 .buddyImage {
   margin: 0;
   padding: 0;
@@ -121,6 +113,28 @@ li a:hover{
   display: none;
 }
 
+.buddysStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.statsHeader {
+  color: #fe4a49;
+}
+
+.buddysBio {
+  text-align: center; 
+  padding: 0 5% 10px; 
+  border: 1px solid #2ab7ca;
+  border-radius: 20px;
+}
+
+.bioHeader {
+  color: #fe4a49;
+
+}
+
 .downTab {
   display: block;
   width: 40px;
@@ -129,6 +143,11 @@ li a:hover{
   margin-right: auto;
   background-color: #e6e6ea;
 }
+
+.downTab:hover {
+  cursor: pointer;
+}
+
 /*Buddy's faves*/
 .favesContainer {
   display: flex;
@@ -147,31 +166,45 @@ li a:hover{
   height: 200px;
   width: 200px;
   background-color: #fe4a49;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: .5rem;
+  text-align: center;
 }
 
-.placesText {
-  color: white;
+.places:hover {
+  cursor: pointer;
 }
 
 .snacks {
   height: 200px;
   width: 200px;
   background-color: #2ab7ca;
-  
+  border: none;
+  color:#e6e6ea;
+  font-size: 1.5em;
+  letter-spacing: .5rem;
+  text-align: center;
 }
 
-.snacksText {
-  color: white;
+.snacks:hover {
+  cursor: pointer;
 }
 
 .toys {
   height: 200px;
   width: 200px;
   background-color: #fed766;
+  border: none;
+  color:#000;
+  font-size: 1.5em;
+  letter-spacing: .5rem;
+  text-align: center;
 }
 
-.toysText {
-  color: white;
+.toys:hover {
+  cursor: pointer;
 }
 
 /*Gallery*/
@@ -223,6 +256,7 @@ img {
   display: flex;
   flex-direction: column;
   letter-spacing: 5px;
+  border-bottom: 1px solid #e6e6ea;
 }
 
 .signUpHeader {
@@ -233,6 +267,7 @@ img {
 
 form {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -247,6 +282,8 @@ input {
   outline: none;
   text-align: center;
   background-color: #f4f4f8;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 input::placeholder {
@@ -262,6 +299,8 @@ input::placeholder {
   background-color: #2ab7ca;
   color: #e6e6ea;
   letter-spacing: 5px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 /*footer*/
 .footerContainer {
@@ -282,4 +321,15 @@ input::placeholder {
 .contactLink {
   color: #fe4a49;
   text-decoration: none;
+}
+
+/*JS classes*/
+
+/*nav*/
+.active {
+  font-size: 1.5em;
+  transition: 1000ms;
+  color: #000;
+  letter-spacing: 5px;
+  font-weight: 900;
 }

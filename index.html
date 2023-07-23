@@ -36,28 +36,28 @@
   <div class="introBanner">
     <h3 id="introSection" class="aboutBuddyBanner">Read Buddy's Intro</h3>
   </div>
-  <!--Div created from clicking downTab-->
+  <!--Div displays from clicking downTab-->
   <div id="buddyIntroDiv">
     <div class="buddysStats">
       <div class="buddysName">
         <h4 class="statsHeader">Name</h4>
-        <p>Buddy Harrison-Ghiselli</p>
+        <p class="stat">Buddy</p>
       </div>
       <div class="buddysBday">
         <h4 class="statsHeader">Date of Birth</h4>
-        <p>05 Dec. 2020</p>
+        <p class="stat">05 Dec. 2020</p>
       </div>
-      <div>
-        <h4 class="statsHeader">Gender</h4>
-        <p>Male</p>
+      <div class="buddysSex">
+        <h4 class="statsHeader">Sex</h4>
+        <p class="stat">Male</p>
       </div>
       <div class="buddysWeight">
         <h4 class="statsHeader">Weight</h4>
-        <p>5.1kg</p>
+        <p class="stat">5.1kg</p>
       </div>
       <div class="buddysBreed">
         <h4 class="statsHeader">Breed</h4>
-        <p>Havanese</p>
+        <p class="stat">Havanese</p>
       </div>
     </div>
     <div class="buddysBio">
@@ -71,26 +71,20 @@
       <p>
         Buddy goes to work with his daddy sometimes, and is the most popular little guy in the entire building. He loves to receive cuddles, and play with his favourite toy with anyone who he can convince to play.</p>
       <p>
-        To know Buddy is to love him, so get to know him.
+        To know Buddy is to love him, so get to know him!
       </p>
     </div>
   </div>
   <!--About Buddy down "arrow"-->
   <div class="buddyArrow">
-    <a type="button" class="downTab"><img class="downTab" id="downTab" onclick="aboutBuddyDropdownElement2()"  src="images/down-arrow.png" alt="Reveal Buddy's Bio"></a>
+    <a type="button" class="downTab"><img class="downTab" id="downTab" onclick="aboutBuddyDropdownElement2();changeToUpArrow()"  src="images/down-arrow.png" alt="Reveal Buddy's Bio"></a>
   </div>
   <!--Buddy's Faves-->
   <h3 id="favesSection" class="favesBanner">Buddy's Faves!</h3>
   <div class="favesContainer">
-    <div class="places">
-      <a class="placesText" id="placesLink" href=""><img src="#" alt="places"></a>
-    </div>
-    <div class="snacks">
-      <a class="snacksText" id="snacksLink" href=""><img src="#" alt="snacks"></a>
-    </div>
-    <div class="toys">
-      <a class="toysText" id="toysLink" href=""><img src="#" alt="toys"></a>
-    </div>
+    <button type="button" class="places">Places</button>
+    <button type="button" class="snacks">Snacks</button>
+    <button type="button" class="toys">Toys</button>
   </div>
   <!--Gallery-->
   <div class="galleryheaderContainer">
@@ -109,18 +103,7 @@
       <a id="buddy7" href=""><img src="images/Buddy7.jpg" alt="buddy7"></a>
       <a id="buddy8" href=""><img src="images/Buddy8.jpg" alt="buddy8"></a>
     </div>
-    <div class="gallery3">
-      <a id="buddy1a" href=""><img src="images/Buddy1.jpg" alt="buddy1a"></a>
-      <a id="buddy2a" href=""><img src="images/Buddy2.jpg" alt="buddy2a"></a>
-      <a id="buddy3a" href=""><img src="images/Buddy3.jpg" alt="buddy3a"></a>
-      <a id="buddy4a" href=""><img src="images/Buddy4.jpg" alt="buddy4a"></a>
-  </div>
-  <div class="gallery4">
-    <a id="buddy5a" href=""><img src="images/Buddy5.jpg" alt="buddy5a"></a>
-    <a id="buddy6a" href=""><img src="images/Buddy6.jpg" alt="buddy6a"></a>
-    <a id="buddy7a" href=""><img src="images/Buddy7.jpg" alt="buddy7a"></a>
-    <a id="buddy8a" href=""><img src="images/Buddy8.jpg" alt="buddy8a"></a>
-  </div>
+   
 </div> 
 <!--Sign Up-->
 <div class="signUpContainer">
