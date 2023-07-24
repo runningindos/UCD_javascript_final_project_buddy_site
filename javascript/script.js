@@ -26,15 +26,18 @@ function aboutBuddyDropdownElement2() {
   if(display == 1) {
     buddyIntroDiv.style.display = "block";
     display = 0;
+    changeArrow.src = 'images/up-arrow.png'
   }
   else
   {
     buddyIntroDiv.style.display = "none";
     display = 1;
+    changeArrow.src = 'images/down-arrow.png'
   }
+  
 } 
 
-//Change down arrow to up arrow when Buddy's bio is revealed
+/*Change down arrow to up arrow when Buddy's bio is revealed
 function changeToUpArrow(){
   let changeArrow = document.getElementById('downTab')
   if(changeArrow.src.match('images/down-arrow.png')){
@@ -42,18 +45,39 @@ function changeToUpArrow(){
   } else {
     changeArrow.src = 'images/down-arrow.png'
   } 
-}
+}*/
 
 //add divs to display faves
-const showPlaces = document.getElementById('showPlaces');
-const placesContent = document.getElementById('placesContent');
+const showPlacesButton = document.getElementById('showPlaces');
+const showSnacksButton = document.getElementById('showSnacks');
+const showToysButton = document.getElementById('showToys');
+const placesContent = document.getElementById('placesContentDiv');
+const snacksContent = document.getElementById('snacksContentDiv');
+const toysContent = document.getElementById('toysContentDiv');
 
 //add event listener for places button click
-showPlaces.addEventListener('click', displayFaves());
+showPlacesButton.addEventListener('click', displayFavesPlaces);
+showSnacksButton.addEventListener('click', displayFavesSnacks);
+showToysButton.addEventListener('click', displayFavesToys);
 
-function displayFaves(){
-  if(showPlaces.style.display === 'none'){
-    showPlaces.style.display = 'flex';
-  } else {showPlaces.style.display = 'none';
-  }
-}  
+function displayFavesPlaces() {
+    if (placesContent.style.display === 'none') {
+        placesContent.style.display = 'flex';
+    } else {
+        placesContent.style.display = 'none';
+    }
+}
+function displayFavesSnacks() {
+    if (snacksContent.style.display === 'none') {
+        snacksContent.style.display = 'flex';
+    } else {
+        snacksContent.style.display = 'none';
+    }
+}
+function displayFavesToys() {
+    if (toysContent.style.display === 'none') {
+        toysContent.style.display = 'flex';
+    } else {
+        toysContent.style.display = 'none';
+    }
+}

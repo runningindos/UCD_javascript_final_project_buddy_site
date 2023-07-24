@@ -132,7 +132,6 @@ li a:hover{
 
 .bioHeader {
   color: #fe4a49;
-
 }
 
 .downTab {
@@ -161,7 +160,7 @@ li a:hover{
   padding-bottom: 20px;
   letter-spacing: 5px;
 }
-
+/*faves places*/
 .places {
   height: 200px;
   width: 200px;
@@ -171,12 +170,36 @@ li a:hover{
   font-size: 1.5em;
   letter-spacing: .5rem;
   text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .places:hover {
   cursor: pointer;
 }
 
+.placesContent {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e6ea;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.placesLink {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: .1rem;
+}
+
+.placesLink:hover {
+  color: #2ab7ca;
+  font-weight: bold;
+}
+
+/*faves snacks*/
 .snacks {
   height: 200px;
   width: 200px;
@@ -186,12 +209,35 @@ li a:hover{
   font-size: 1.5em;
   letter-spacing: .5rem;
   text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .snacks:hover {
   cursor: pointer;
 }
 
+.snacksContent {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e6ea;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  justify-content: center;
+}
+
+.snacksImage {
+  object-fit: cover;
+  width: 190px;
+  height: 190px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border: 1px solid #2ab7ca;
+}
+
+/*faves toys*/
 .toys {
   height: 200px;
   width: 200px;
@@ -201,10 +247,32 @@ li a:hover{
   font-size: 1.5em;
   letter-spacing: .5rem;
   text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .toys:hover {
   cursor: pointer;
+}
+
+.toysContent {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e6ea;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  justify-content: center;
+}
+
+.toysImage {
+  object-fit: cover;
+  width: 190px;
+  height: 190px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border: 1px solid #2ab7ca;
 }
 
 /*Gallery*/
@@ -231,19 +299,6 @@ li a:hover{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-.gallery3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.gallery4 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 img {

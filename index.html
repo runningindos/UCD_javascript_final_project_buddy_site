@@ -30,7 +30,7 @@
   <!--div 2:image, and bio as a dropdown menu-->
   <div class="buddyImage">
     <!-- <div class="divLine"></div> -->
-    <img class="buddyHero" src="images/Buddy.jpg" alt="buddy">
+    <img class="buddyHero" src="images/buddy.jpg" alt="buddy">
   </div>
   <!--About Buddy banner-->
   <div class="introBanner">
@@ -81,11 +81,41 @@
   </div>
   <!--Buddy's Faves-->
   <h3 id="favesSection" class="favesBanner">Buddy's Faves!</h3>
-  <div class="favesContainer">
-    <button type="button" class="places" id="showPlaces">Places</button>
-    <button type="button" class="snacks" id="showSnacks">Snacks</button>
-    <button type="button" class="toys" id="showToys">Toys</button>
-  </div>
+<div class="favesContainer">
+    <div>
+      <button type="button" class="places" id="showPlaces">Places</button>
+      <div class="placesContent" id="placesContentDiv" style="display: none;">
+        <!--content for fave places (links)-->
+        <a class="placesLink" href="https://www.phoenixpark.ie/" target="_blank">Phoenix Park</a>
+
+        <a class="placesLink" href="https://www.dublincity.ie/residential/parks/dublin-city-parks/visit-park/north-bull-island" target="_blank">Bull Island</a> 
+        
+        <a class="placesLink" href="https://www.dublinsoutdoors.ie/visit/our-parks/dodder-valley-park/" target="_blank">Dodder Valley Park</a>
+      </div>
+    </div>
+    <div>
+        <button type="button" class="snacks" id="showSnacks">Snacks</button>
+        <div class="snacksContent" id="snacksContentDiv" style="display: none;">
+          <!--content for fave snacks-->
+          <img src="images/snack1.jpg" alt="" class="snacksImage">
+
+          <img src="images/snack2.jpg" alt="" class="snacksImage">
+
+          <img src="images/snack3.jpg" alt="" class="snacksImage">
+        </div>
+    </div>
+    <div>
+        <button type="button" class="toys" id="showToys">Toys</button>
+        <div class="toysContent" id="toysContentDiv" style="display: none;">
+          <!--conetent for fave toys-->
+          <img src="images/toy1.jpg" alt="bert" class="toysImage">
+
+          <img src="images/toy2.jpg" alt="la_corda" class="toysImage">
+
+          <img src="images/toy3.jpg" alt="" class="toysImage">
+        </div>
+    </div>
+</div>
   <!--Gallery-->
   <div class="galleryheaderContainer">
     <h3 id="gallerySection" class="galleryBanner">Gallery</h3>
