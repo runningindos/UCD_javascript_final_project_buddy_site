@@ -10,12 +10,10 @@ let activeLink = document.querySelectorAll('.navLinks').forEach((navLink) => {
   navLink.classList.add('active');
 
  });
-  
-
 });
 
 
-function signUpSuccessfull(){
+function signUpSuccessful(){
   let 
 }
 //Reveal/hide Buddy's Bio upon clicking down arrow
