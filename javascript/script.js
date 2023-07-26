@@ -16,10 +16,12 @@ let activeLink = document.querySelectorAll('.navLinks').forEach((navLink) => {
 function signUpSuccessful(){
   let 
 }
+
 //Reveal/hide Buddy's Bio upon clicking down arrow
 let buddyIntroDiv = document.getElementById("buddyIntroDiv");
 let display = 0;
 let changeArrow = document.getElementById('downTab')
+
 function aboutBuddyDropdownElement2() {
   if(display == 1) {
     buddyIntroDiv.style.display = "block";
@@ -79,3 +81,57 @@ function displayFavesToys() {
         toysContent.style.display = 'none';
     }
 }
+
+/*verify input text in input fields
+const nameInput = document.getElementById('nameInput')
+const emailInput = document.getElementById('emailinput')
+const nameCriteria = document.getElementById('nameCriteria')
+const emailCriteria = document.getElementById('emailCriteria')
+const form = document.getElementById('newsletterForm')
+const errorMessage = document.getElementById('error')
+
+newsletterForm.addEventListener('submit', e => {
+  e.preventDefault();
+
+  validateInputs();
+});
+
+const errorMessage = (element, message) => {
+
+}
+
+const validateInputs = () => {
+  const nameInputValue = nameInput.value.trim();
+  const emailInputValue = emailInput.value.trim();
+  
+  if(nameInputValue === '')
+};*/
+
+//form validation
+function validateForm(){
+  const nameInput = getElementById('nameInput').value;
+  const emailInput = getElementById('emailInput').value;
+
+  if(nameInput === '' && emailInput === ''){
+    Text = "please enter 2+ digits in name field.";
+  }else {
+     document.getElementById(nameCriteria).classList.add('nameCriteriaMet input')
+     console.log(validateForm)
+  }
+};
+
+/*function validation(){
+  let username = document.getElementById('nameInput').value;
+  let email = document.getElementById('emailInput').value;
+
+  let regex = new /^([a-zA-Z0-9\._]+)@[a-zA-Z0-9]+.(.[a-z]+)?$/
+
+  if(regex.email(email))
+ 
+}*/
+
+/*if(username === '' && email === ''){
+  console.log('Please enter username and/or email');
+}else {
+
+}*/

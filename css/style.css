@@ -29,6 +29,7 @@ h3 {
   top: 0;
   z-index: 100;
   background-color: #2ab7ca;
+  height: 50px;
 }
 
 .fixedNav {
@@ -44,9 +45,8 @@ h3 {
 li {
   list-style: none;
   text-decoration: none;
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 10px;
 }
 
@@ -320,6 +320,14 @@ img {
   padding-top: 15px;
 }
 
+.criteria {
+  letter-spacing: 0rem;
+  text-align: center;
+  margin: 1px;
+  font-size: small;
+  color: grey;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -338,7 +346,7 @@ input {
   text-align: center;
   background-color: #f4f4f8;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 input::placeholder {
@@ -354,9 +362,22 @@ input::placeholder {
   background-color: #2ab7ca;
   color: #e6e6ea;
   letter-spacing: 5px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
+
+.formLabel {
+  color: #fe4a49;
+}
+
+.nameCriteriaMet input {
+  color: #2ab7ca;
+}
+
+.emailCriteriaMet input {
+  color: #2ab7ca;
+}
+
 /*footer*/
 .footerContainer {
   display: flex;
@@ -382,7 +403,6 @@ input::placeholder {
 
 /*nav*/
 .active {
-  font-size: 1.5em;
   transition: 1000ms;
   color: #000;
   letter-spacing: 5px;

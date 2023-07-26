@@ -141,10 +141,18 @@
     <h3 class="Newsletter">Join Buddy's Newsletter!</h3>
   </div>
 
+  <div class="successCriteria">
+    <p id="nameCriteria" class="criteria">&bull; name must have at least two characters</p>
+    <p id="emailCriteria" class="criteria">&bull; email must have "@" symbol</p>
+  </div>
+
   <div class="formContainer">
-    <form action="">
-      <input type="text" name="name" placeholder="Name">
-      <input type="email" name="email" placeholder="Email">
+    <div id="error"></div>
+    <form id="newsletterForm" action="">
+      <input id="nameInput" type="text" name="name" required>
+      <label class="formLabel" for="name">name</label>
+      <input id="emailInput" type="email" name="email">
+      <label class="formLabel" for="email">email</label>
       <button class="formButton" type="submit">Join!</button>
     </form>
   </div>
