@@ -336,7 +336,7 @@ form {
 }
 
 input {
-  width: 250px;
+  width: 50%;
   height: 35px;
   border-bottom: 1px solid #2ab7ca;
   border-top: none;
