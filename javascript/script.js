@@ -108,17 +108,30 @@ const validateInputs = () => {
 };*/
 
 //form validation
-function validateForm(){
-  const nameInput = getElementById('nameInput').value;
-  const emailInput = getElementById('emailInput').value;
 
-  if(nameInput === '' && emailInput === ''){
+
+function validateForm(){
+  const nameInput = document.getElementById('nameInput');
+  const nameCriteria = document.getElementById('nameCriteria');
+  const emailInput = document.getElementById('emailInput');
+  const emailCriteria = document.getElementById('emailCriteria');
+
+
+//add event listeners for input fields
+nameInput.addEventListener(input, nameValidation);
+function nameValidation(){
+  document.getElementById(nameCriteria);
+  nameCriteria.classList.add('nameCriteria');
+
+}};
+
+/*  if(nameInput === '' && emailInput === ''){
     Text = "please enter 2+ digits in name field.";
   }else {
-     document.getElementById(nameCriteria).classList.add('nameCriteriaMet input')
-     console.log(validateForm)
+     document.getElementById(nameCriteria).classList.add('nameCriteriaMet')
+     
   }
-};
+}; */
 
 /*function validation(){
   let username = document.getElementById('nameInput').value;
