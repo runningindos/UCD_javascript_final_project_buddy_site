@@ -3,11 +3,11 @@ let activeLink = document.querySelectorAll('.navLinks').forEach((navLink) => {
   navLink.addEventListener("click", (event) => {
     console.log(event.target);
     document.querySelectorAll('.navLinks.active').forEach((activeLink) => {
-      activeLink.classList.remove('active');
+      activeLink.classList.remove('.active');
     });
     
     //navLinks.classList.remove('active');
-  navLink.classList.add('active');
+  navLink.classList.add('.active');
 
  });
 });
@@ -36,16 +36,6 @@ function aboutBuddyDropdownElement2() {
   }
   
 } 
-
-/*Change down arrow to up arrow when Buddy's bio is revealed
-function changeToUpArrow(){
-  let changeArrow = document.getElementById('downTab')
-  if(changeArrow.src.match('images/down-arrow.png')){
-    changeArrow.src = 'images/up-arrow.png'
-  } else {
-    changeArrow.src = 'images/down-arrow.png'
-  } 
-}*/
 
 //add divs to display faves
 const showPlacesButton = document.getElementById('showPlaces');
@@ -82,69 +72,26 @@ function displayFavesToys() {
     }
 }
 
-/*verify input text in input fields
-const nameInput = document.getElementById('nameInput')
-const emailInput = document.getElementById('emailinput')
-const nameCriteria = document.getElementById('nameCriteria')
-const emailCriteria = document.getElementById('emailCriteria')
-const form = document.getElementById('newsletterForm')
-const errorMessage = document.getElementById('error')
-
-newsletterForm.addEventListener('submit', e => {
-  e.preventDefault();
-
-  validateInputs();
-});
-
-const errorMessage = (element, message) => {
-
-}
-
-const validateInputs = () => {
-  const nameInputValue = nameInput.value.trim();
-  const emailInputValue = emailInput.value.trim();
-  
-  if(nameInputValue === '')
-};*/
-
 //form validation
+document.addEventListener('DOMContentLoaded', function() {
 
+function validateName() {
+  const valName = document.getElementById('nameInput').value;
 
-function validateForm(){
-  const nameInput = document.getElementById('nameInput');
-  const nameCriteria = document.getElementById('nameCriteria');
-  const emailInput = document.getElementById('emailInput');
-  const emailCriteria = document.getElementById('emailCriteria');
+  //remove whitespace
+  const trimmedInput = valName.trim();
 
+  // Update the input value with the trimmed value
+  document.getElementById('nameInput').value = trimmedInput;
 
-//add event listeners for input fields
-nameInput.addEventListener(input, nameValidation);
-function nameValidation(){
-  document.getElementById(nameCriteria);
-  nameCriteria.classList.add('nameCriteria');
+  // Display the length of the trimmed input
+  document.getElementById('nameCriteria').innerText = "length : " + trimmedInput.length;
 
-}};
-
-/*  if(nameInput === '' && emailInput === ''){
-    Text = "please enter 2+ digits in name field.";
-  }else {
-     document.getElementById(nameCriteria).classList.add('nameCriteriaMet')
-     
+  //confirm name field length
+  if (trimmedInput.length >= 2) {
+    document.getElementById("nameCriteria").style.color = "#2ab7ca";
+  } else {
+    document.getElementById("nameCriteria").style.color = "initial"; // Reset the color if length is less than 2
   }
-}; */
-
-/*function validation(){
-  let username = document.getElementById('nameInput').value;
-  let email = document.getElementById('emailInput').value;
-
-  let regex = new /^([a-zA-Z0-9\._]+)@[a-zA-Z0-9]+.(.[a-z]+)?$/
-
-  if(regex.email(email))
- 
-}*/
-
-/*if(username === '' && email === ''){
-  console.log('Please enter username and/or email');
-}else {
-
-}*/
+}
+});

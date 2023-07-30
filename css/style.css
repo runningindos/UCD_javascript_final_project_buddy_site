@@ -399,7 +399,7 @@ input::placeholder {
   text-decoration: none;
 }
 
-/*JS classes*/
+/*JS CLASSES*/
 
 /*nav*/
 .active {
@@ -407,4 +407,63 @@ input::placeholder {
   color: #000;
   letter-spacing: 5px;
   font-weight: 900;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 670px){
+  /*nav*/
+
+  li {
+    list-style: none;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  
+  li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    transition: 1500ms;
+  }
+  
+  li a:hover{
+    transition: 1500ms;
+    color: #000;
+    letter-spacing: 3px;
+    font-weight: 900;
+  }
+
+  /*faves container*/
+  .favesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .snacks, .toys {
+    border-radius: 0px;
+  }
+
+  /*GALLERY*/
+  .galleryContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .gallery1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*FOOTER*/
+  footer {
+    font-size: .8rem;
+  }
 }
