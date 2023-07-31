@@ -89,7 +89,99 @@ const secondText = Math.floor((difference % minute) / second);
 };
 setInterval(countdown, 1000);
 
-//form validation
+//QUIZ
+//start game, and hide intro and faves sections
+const clickStart = document.getElementById('startBtn')
+startBtn.addEventListener('click', startGame);
+const hideFavesContainer = document.getElementById('favesContainer');
+favesContainer.addEventListener('click', startGame);
+const hideBuddyIntroDiv = document.getElementById('buddyIntroDiv');
+buddyIntroDiv.addEventListener('click', startGame);
+const hideBuddyArrow = document.getElementById('buddyArrow');
+buddyArrow.addEventListener('click', startGame);
+const showQuizContainer = document.getElementById('quizContainer');
+quizContainer.addEventListener('click', startGame);
+const questionElement = document.getElementById('question');
+const answerButtonElement = document.getElementById('answer-buttons');
+const questions = document.querySelectorAll('.quizContainer > div');
+
+function startGame(){
+  console.log('game started, bro')
+  startBtn.classList.add('hide');
+  //shuffledQuestions = questions.sort(() =>Math.random() - .5)
+  //currentQuestion = 0
+  console.log('hide start button works')
+  favesContainer.classList.add('hide');
+  console.log('hide faves container works')
+  buddyIntroDiv.classList.add('hide');
+  console.log('hide buddyIntroDiv works')
+  buddyArrow.classList.add('hide');
+  console.log('hide buddyArrow works')
+  quizContainer.classList.remove('hide');
+  console.log('Q1 works')
+  //keepGoing()
+    
+}
+
+//reveal question
+function checkAnswer(button){
+  if (button.textContent.trim() === '05 Dec. 2020' || button.textContent.trim() === 'Bull Island' || button.textContent.trim() === 'Yoshi'){
+    score++;
+  }
+  if (currentQuestion === totalQuestions - 1){
+    showResult();
+  } else {
+    showQuestion(currentQuestion +1);
+  }
+}
+  
+  
+
+
+/*choosing an answer
+function chooseAnswer(){
+  const correctAnswer = ['05 Dec. 2020', 'Bull Island', 'Yoshi']
+  let score = 0;
+
+  const q1Answer = document.querySelector('button[')
+
+}*/
+
+
+
+//next question upon clicking "keepGoing" button
+/*function keepGoing() {
+  showQuestion(shuffledQuestions[currentQuestionIndex])
+
+}
+function showQuestion(question) {
+  questionElement.innerText = question.question
+  question.answers.forEach(answer => {
+    const button = document.createElement('button')
+    button.innerText = answer.text
+    button.classList.add('qbtn')
+    if(answer.correct) {
+      button.dataset.correct = answer.correct
+    }
+    button.addEventListener('click', selectAnswer)
+    answerButtonsElement.appendChild(button)
+    console.log(correct, mate)
+  })
+}
+
+
+
+const questions = [{
+  questions: 'When is Buddy/s B-day?',
+  answers: [
+    {text: '05 Jan. 2020', wrong: false}, 
+    {text: '04 Jul. 2020', wrong: false}, 
+    {text: '23 Nov. 2020', wrong: false},
+    {text: '05 Dec. 2020', correct: true},
+  ]
+}]*/
+
+//FORM VALIDATION
 document.addEventListener('DOMContentLoaded', function() {
 
 function validateName() {

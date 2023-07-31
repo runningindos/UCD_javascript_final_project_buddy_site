@@ -37,7 +37,7 @@
     <h3 id="introSection" class="aboutBuddyBanner">Read Buddy's Intro</h3>
   </div>
   <!--Div displays from clicking downTab-->
-  <div id="buddyIntroDiv">
+  <div id="buddyIntroDiv" class="buddyIntroDiv">
     <div class="buddysStats">
       <div class="buddysName">
         <h4 class="statsHeader">Name</h4>
@@ -76,12 +76,12 @@
     </div>
   </div>
   <!--About Buddy down "arrow"-->
-  <div class="buddyArrow">
+  <div id="buddyArrow" class="buddyArrow">
     <a type="button" class="downTab"><img class="downTab" id="downTab" onclick="aboutBuddyDropdownElement2();changeToUpArrow()"  src="images/down-arrow.png" alt="Reveal Buddy's Bio"></a>
   </div>
   <!--Buddy's Faves-->
   <h3 id="favesSection" class="favesBanner">Buddy's Faves!</h3>
-<div class="favesContainer">
+  <div id="favesContainer" class="favesContainer">
     <div>
       <button type="button" class="places" id="showPlaces">Places</button>
       <div class="placesContent" id="placesContentDiv" style="display: none;">
@@ -115,6 +115,46 @@
           <img src="images/toy3.jpg" alt="" class="toysImage">
         </div>
     </div>
+  </div>
+  <div class="startBtnDiv">
+    <p class="startQuizHeader"><i>Test your Buddy knowledge!</i></p>
+    <button id="startBtn" class="startBtn">Let's Go!</button>
+</div>
+  <!--Quiz-->
+<div id="quizContainer" class="quizContainer hide">
+  <div id="q1" class="q1">
+    <p class="q1Header">When's Buddy's B-day?</p>
+    <div id="q1Answers" class="q1Answers">
+      <button class="qbtn">05 Jan. 2020</button>
+      <button class="qbtn">04 Jul. 2020</button>
+      <button class="qbtn">23 Nov. 2020</button>
+      <button class="qbtn">05 Dec. 2020</button>
+    </div>
+  </div>
+
+  <div id="q2" class="q2">
+    <p class="q2Header">Which is one of Buddy's favourite places?</p>
+    <div id="q2Answers" class="q2Answers">
+      <button class="qbtn">Killiney Hill Park</button>
+      <button class="qbtn">Bull Island</button>
+      <button class="qbtn">Herbert Park</button>
+      <button class="qbtn">Tolka Valley Park</button>
+    </div>
+  </div>
+
+  <div id="q3" class="q3">
+    <p class="q3Header">Who is Buddy's Best friend?</p>
+    <div id="q3Answers" class="q3Answers">
+      <button class="qbtn">Luigi</button>
+      <button class="qbtn">Yoshi</button>
+      <button class="qbtn">Mario</button>
+      <button class="qbtn">Peach</button>
+    </div>
+  </div>
+</div>
+
+<div id="keepGoing" class="keepGoing">
+  <button id="nextBtn" class="nextBtn">Keep Going!</button>
 </div>
   <!--Gallery-->
   <div class="galleryheaderContainer">
