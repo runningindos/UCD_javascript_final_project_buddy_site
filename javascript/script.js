@@ -125,7 +125,7 @@ function startGame(){
   console.log('NextBTN appeared')
 } 
 
-  //set and check correct answer for next question 1
+//set and check correct answer for next question 1
 function checkAnswer(buttonId){
   const answer = "a4";
   const selectedAnswer = buttonId;
@@ -148,7 +148,9 @@ function checkAnswer(buttonId){
     button.addEventListener('click', () => checkAnswer(button.id));
   })
 
-  //set and check correct answer for question 2
+
+
+//set and check correct answer for question 2
   function checkAnswer2(buttonId){
     const answer2 = "a6";
     const selectedAnswer2 = buttonId;
@@ -190,6 +192,7 @@ function checkAnswer3(buttonId3){
     button.addEventListener('click', () => checkAnswer3(button.id3));
   })
 
+  /* something in this area is breaking the rest of the site functionality, and I'm not sure what it is.
 //End game and reveal hidden divs
 
 function endGame(){
@@ -229,5 +232,4 @@ function validateName() {
     document.getElementById("nameCriteria").style.color = "initial"; // Reset the color if length is less than 2
   }
 }
-});
-
+});*/
