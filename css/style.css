@@ -301,9 +301,23 @@ li a:hover{
   margin-bottom: 20px;
 }
 
-:root {
-  --border: 1.5px solid #2ab7ca;
-  --border: 1.5px solid #fe4a49;
+.correct {
+  border: 2px solid #2ab7ca;
+}
+
+.correctPopup {
+  width: 80%;
+  height: 50%;
+  background-color: #f4f4f8;
+  border: 2px solid #2ab7ca;
+  border-radius: 20px;
+  z-index: 8;
+  box-shadow: 10 10 10 .25;
+  margin: auto;
+}
+
+.incorrect {
+  border: 2px solid #fe4a49;
 }
 
 .quizContainer {
@@ -394,7 +408,7 @@ li a:hover{
 }
 
 .keepGoing {
-  display: none;
+  display: flex;
   justify-content: center;
 }
 

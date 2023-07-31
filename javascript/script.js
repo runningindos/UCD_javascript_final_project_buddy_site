@@ -92,18 +92,20 @@ setInterval(countdown, 1000);
 //QUIZ
 //start game, and hide intro and faves sections
 const clickStart = document.getElementById('startBtn')
-startBtn.addEventListener('click', startGame);
+startBtn.addEventListener('click', startGame, endGame);
 const hideFavesContainer = document.getElementById('favesContainer');
-favesContainer.addEventListener('click', startGame);
+favesContainer.addEventListener('click', startGame, endGame);
 const hideBuddyIntroDiv = document.getElementById('buddyIntroDiv');
-buddyIntroDiv.addEventListener('click', startGame);
+buddyIntroDiv.addEventListener('click', startGame, endGame);
 const hideBuddyArrow = document.getElementById('buddyArrow');
-buddyArrow.addEventListener('click', startGame);
+buddyArrow.addEventListener('click', startGame, endGame);
 const showQuizContainer = document.getElementById('quizContainer');
-quizContainer.addEventListener('click', startGame);
+quizContainer.addEventListener('click', startGame, endGame);
 const questionElement = document.getElementById('question');
 const answerButtonElement = document.getElementById('answer-buttons');
 const questions = document.querySelectorAll('.quizContainer > div');
+const showNextButton = document.getElementById('nextBtn');
+nextBtn.addEventListener('click', startGame, endGame);
 
 function startGame(){
   console.log('game started, bro')
@@ -119,67 +121,91 @@ function startGame(){
   console.log('hide buddyArrow works')
   quizContainer.classList.remove('hide');
   console.log('Q1 works')
-  //keepGoing()
-    
-}
+  nextBtn.classList.remove('hide');
+  console.log('NextBTN appeared')
+} 
 
-//reveal question
-function checkAnswer(button){
-  if (button.textContent.trim() === '05 Dec. 2020' || button.textContent.trim() === 'Bull Island' || button.textContent.trim() === 'Yoshi'){
-    score++;
-  }
-  if (currentQuestion === totalQuestions - 1){
-    showResult();
+  //set and check correct answer for next question 1
+function checkAnswer(buttonId){
+  const answer = "a4";
+  const selectedAnswer = buttonId;
+  let celebrateCorrectAnswer = document.getElementById('q1');
+  correctPopup.classList.add('click', checkAnswer === answer);
+
+  if(selectedAnswer == answer){
+    alert("YAY! Buddy's B-day is on 05 Dec. 2020.");
+    display.classList.celebrateCorrectPopup(q1);
   } else {
-    showQuestion(currentQuestion +1);
+    alert("Sorry. Better luck next time!");
+    document.getElementById('.q1');
+    q1.classList.add('hide');
   }
+  console.log('this worked')
 }
-  
-  
 
-
-/*choosing an answer
-function chooseAnswer(){
-  const correctAnswer = ['05 Dec. 2020', 'Bull Island', 'Yoshi']
-  let score = 0;
-
-  const q1Answer = document.querySelector('button[')
-
-}*/
-
-
-
-//next question upon clicking "keepGoing" button
-/*function keepGoing() {
-  showQuestion(shuffledQuestions[currentQuestionIndex])
-
-}
-function showQuestion(question) {
-  questionElement.innerText = question.question
-  question.answers.forEach(answer => {
-    const button = document.createElement('button')
-    button.innerText = answer.text
-    button.classList.add('qbtn')
-    if(answer.correct) {
-      button.dataset.correct = answer.correct
-    }
-    button.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(button)
-    console.log(correct, mate)
+  const answers = document.querySelectorAll('.qbtn');
+  answers.forEach(button => {
+    button.addEventListener('click', () => checkAnswer(button.id));
   })
+
+  //set and check correct answer for question 2
+  function checkAnswer2(buttonId){
+    const answer2 = "a6";
+    const selectedAnswer2 = buttonId;
+  
+    if(selectedAnswer2 === answer2){
+      alert("YAY! Bull Island is one of Buddy's favourite places!");
+      display.classList.correctPopup(q2);
+    } else {
+      alert("Sorry. Better luck next time!");
+      document.getElementById('.q2');
+      q2.classList.add('hide');
+    }
+    console.log('this worked')
+  }
+  
+    const answers2 = document.querySelectorAll('.qbtn');
+    answers2.forEach(button => {
+      button.addEventListener('click', () => checkAnswer2(button.id2));
+    })
+
+//set and check correct answer for question 3
+function checkAnswer3(buttonId3){
+  const answer3 = "a10";
+  const selectedAnswer3 = buttonId3;
+
+  if(selectedAnswer3 === answer3){
+    alert("YAY! Bull Island is one of Buddy's favourite places!");
+    display.classList.correctPopup(q3);
+  } else {
+    alert("Sorry. Better luck next time!");
+    document.getElementById('.q2');
+    q3.classList.add('hide');
+  }
+  console.log('this worked')
 }
 
+  const answers3 = document.querySelectorAll('.qbtn');
+  answers3.forEach(button => {
+    button.addEventListener('click', () => checkAnswer3(button.id3));
+  })
 
+//End game and reveal hidden divs
 
-const questions = [{
-  questions: 'When is Buddy/s B-day?',
-  answers: [
-    {text: '05 Jan. 2020', wrong: false}, 
-    {text: '04 Jul. 2020', wrong: false}, 
-    {text: '23 Nov. 2020', wrong: false},
-    {text: '05 Dec. 2020', correct: true},
-  ]
-}]*/
+function endGame(){
+  console.log('game ended, bro')
+  startBtn.classList.remove('hide');
+  console.log('show start button works')
+  favesContainer.classList.remove('hide');
+  console.log('show faves container works')
+  buddyIntroDiv.classList.remove('hide');
+  console.log('show buddyIntroDiv works')
+  buddyArrow.classList.remove('hide');
+  console.log('show buddyArrow works')
+  quizContainer.classList.add('hide');
+  nextBtn.classList.add('hide');
+  console.log('endGame btn hidden')
+} 
 
 //FORM VALIDATION
 document.addEventListener('DOMContentLoaded', function() {
